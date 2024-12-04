@@ -201,127 +201,157 @@
         - #ABOUT
       -->
 
-     <article class="about active" data-page="about">
-  <header>
-    <h2 class="h2 article-title">Mass Incarceration: A Systemic Crisis</h2>
-  </header>
+     <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mass Incarceration Crisis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  <section class="about-text">
-    <p>
-      As a criminal justice researcher and advocate based in Washington D.C., I focus on exposing the harsh realities of America's mass incarceration system. My work combines data analysis, policy research, and direct advocacy to demonstrate how this system perpetuates racial and economic inequality.
-    </p>
-    <p>
-      The United States incarcerates more people than any other nation, with over 2 million individuals behind bars. This represents 25% of the world's prison population, despite having only 5% of the global population. Through my research and advocacy, I reveal how this crisis devastates communities, wastes taxpayer money, and fails to make society safer.
-    </p>
-  </section>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f5f5f5;
+    }
 
-  <section class="service">
-    <h3 class="h3 service-title">Critical Issues</h3>
-    <ul class="service-list">
-      <li class="service-item">
-        <div class="service-icon-box">
-          <img src="./assets/images/icon-justice.svg" alt="justice icon" width="40">
-        </div>
-        <div class="service-content-box">
-          <h4 class="h4 service-item-title">Racial Injustice</h4>
-          <p class="service-item-text">
-            Black Americans face 5.9 times higher incarceration rates than whites, revealing systemic racism in our justice system.
-          </p>
-        </div>
-      </li>
+    /* Sidebar */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 300px;
+      height: 100vh;
+      background: #fff;
+      padding: 30px;
+      z-index: 1;
+      overflow-y: auto;
+      transition: 0.3s;
+    }
 
-      <li class="service-item">
-        <div class="service-icon-box">
-          <img src="./assets/images/icon-money.svg" alt="economic impact icon" width="40">
-        </div>
-        <div class="service-content-box">
-          <h4 class="h4 service-item-title">Economic Burden</h4>
-          <p class="service-item-text">
-            $182 billion spent annually on mass incarceration, draining resources from education and social services.
-          </p>
-        </div>
-      </li>
+    .sidebar.active {
+      transform: translateX(0);
+    }
 
-      <li class="service-item">
-        <div class="service-icon-box">
-          <img src="./assets/images/icon-family.svg" alt="family impact icon" width="40">
-        </div>
-        <div class="service-content-box">
-          <h4 class="h4 service-item-title">Family Destruction</h4>
-          <p class="service-item-text">
-            Over 5 million children have experienced parental incarceration, perpetuating cycles of poverty and trauma.
-          </p>
-        </div>
-      </li>
+    .avatar-box img {
+      width: 80px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
 
-      <li class="service-item">
-        <div class="service-icon-box">
-          <img src="./assets/images/icon-reform.svg" alt="reform icon" width="40">
-        </div>
-        <div class="service-content-box">
-          <h4 class="h4 service-item-title">Failed Rehabilitation</h4>
-          <p class="service-item-text">
-            68% recidivism rate proves current system fails at rehabilitation and public safety.
-          </p>
-        </div>
-      </li>
-    </ul>
-  </section>
+    /* Navigation */
+    .navbar {
+      padding: 20px;
+      background: #fff;
+      margin-left: 300px;
+    }
 
-  <section class="testimonials">
-    <h3 class="h3 testimonials-title">Expert Perspectives</h3>
-    <ul class="testimonials-list has-scrollbar">
-      <li class="testimonials-item">
-        <div class="content-card" data-testimonials-item>
-          <figure class="testimonials-avatar-box">
-            <img src="./assets/images/expert-1.jpg" alt="Dr. Michelle Alexander" width="60">
-          </figure>
-          <h4 class="h4 testimonials-item-title">Dr. Michelle Alexander</h4>
-          <div class="testimonials-text">
-            <p>
-              "Mass incarceration operates as a comprehensive system of racial and social control, with devastating consequences for communities of color. The evidence is clear: this system must be dismantled."
-            </p>
-          </div>
-        </div>
-      </li>
+    .navbar-list {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
 
-      <li class="testimonials-item">
-        <div class="content-card" data-testimonials-item>
-          <figure class="testimonials-avatar-box">
-            <img src="./assets/images/expert-2.jpg" alt="Bryan Stevenson" width="60">
-          </figure>
-          <h4 class="h4 testimonials-item-title">Bryan Stevenson</h4>
-          <div class="testimonials-text">
-            <p>
-              "The opposite of poverty is not wealth. The opposite of poverty is justice. Our criminal justice system perpetuates poverty through mass incarceration."
-            </p>
-          </div>
-        </div>
-      </li>
-    </ul>
-  </section>
+    .navbar-link {
+      padding: 10px 20px;
+      border: none;
+      background: none;
+      cursor: pointer;
+      font-size: 16px;
+      color: #555;
+      transition: 0.3s;
+    }
 
-  <section class="clients">
-    <h3 class="h3 clients-title">Supporting Organizations</h3>
-    <ul class="clients-list has-scrollbar">
-      <li class="clients-item">
-        <a href="#">
-          <img src="./assets/images/org-1.png" alt="ACLU logo">
-        </a>
-      </li>
-      <li class="clients-item">
-        <a href="#">
-          <img src="./assets/images/org-2.png" alt="Equal Justice Initiative logo">
-        </a>
-      </li>
-      <li class="clients-item">
-        <a href="#">
-          <img src="./assets/images/org-3.png" alt="The Sentencing Project logo">
-        </a>
-      </li>
-    </ul>
-  </section>
-</article>
+    .navbar-link.active {
+      color: #0066cc;
+    }
+
+    /* Main Content */
+    .main-content {
+      margin-left: 300px;
+      padding: 20px;
+    }
+
+    .article-title {
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+
+    .service-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin: 30px 0;
+    }
+
+    .service-item {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .service-item:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Testimonials */
+    .testimonials-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .content-card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Your existing HTML structure here -->
+
+<script>
+  // Navigation functionality
+  const sidebarBtn = document.querySelector('[data-sidebar-btn]');
+  const sidebar = document.querySelector('[data-sidebar]');
+  const navLinks = document.querySelectorAll('[data-nav-link]');
+  const pages = document.querySelectorAll('[data-page]');
+
+  sidebarBtn?.addEventListener('click', () => {
+    sidebar.classList.toggle('active');
+  });
+
+  navLinks.forEach((link, index) => {
+    link.addEventListener('click', () => {
+      navLinks.forEach(l => l.classList.remove('active'));
+      pages.forEach(p => p.classList.remove('active'));
+      link.classList.add('active');
+      pages[index].classList.add('active');
+    });
+  });
+</script>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
+
 
 
 

@@ -201,260 +201,128 @@
         - #ABOUT
       -->
 
-      <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mass Incarceration Crisis</title>
-    <style>
-        /* Base styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+     <article class="about active" data-page="about">
+  <header>
+    <h2 class="h2 article-title">Mass Incarceration: A Systemic Crisis</h2>
+  </header>
 
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #f4f4f4;
-        }
+  <section class="about-text">
+    <p>
+      As a criminal justice researcher and advocate based in Washington D.C., I focus on exposing the harsh realities of America's mass incarceration system. My work combines data analysis, policy research, and direct advocacy to demonstrate how this system perpetuates racial and economic inequality.
+    </p>
+    <p>
+      The United States incarcerates more people than any other nation, with over 2 million individuals behind bars. This represents 25% of the world's prison population, despite having only 5% of the global population. Through my research and advocacy, I reveal how this crisis devastates communities, wastes taxpayer money, and fails to make society safer.
+    </p>
+  </section>
 
-        /* Animations */
-        .service-item {
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 0.6s ease forwards;
-        }
+  <section class="service">
+    <h3 class="h3 service-title">Critical Issues</h3>
+    <ul class="service-list">
+      <li class="service-item">
+        <div class="service-icon-box">
+          <img src="./assets/images/icon-justice.svg" alt="justice icon" width="40">
+        </div>
+        <div class="service-content-box">
+          <h4 class="h4 service-item-title">Racial Injustice</h4>
+          <p class="service-item-text">
+            Black Americans face 5.9 times higher incarceration rates than whites, revealing systemic racism in our justice system.
+          </p>
+        </div>
+      </li>
 
-        .service-item:nth-child(1) { animation-delay: 0.2s; }
-        .service-item:nth-child(2) { animation-delay: 0.4s; }
-        .service-item:nth-child(3) { animation-delay: 0.6s; }
-        .service-item:nth-child(4) { animation-delay: 0.8s; }
+      <li class="service-item">
+        <div class="service-icon-box">
+          <img src="./assets/images/icon-money.svg" alt="economic impact icon" width="40">
+        </div>
+        <div class="service-content-box">
+          <h4 class="h4 service-item-title">Economic Burden</h4>
+          <p class="service-item-text">
+            $182 billion spent annually on mass incarceration, draining resources from education and social services.
+          </p>
+        </div>
+      </li>
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+      <li class="service-item">
+        <div class="service-icon-box">
+          <img src="./assets/images/icon-family.svg" alt="family impact icon" width="40">
+        </div>
+        <div class="service-content-box">
+          <h4 class="h4 service-item-title">Family Destruction</h4>
+          <p class="service-item-text">
+            Over 5 million children have experienced parental incarceration, perpetuating cycles of poverty and trauma.
+          </p>
+        </div>
+      </li>
 
-        /* Component Styles */
-        .about {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
+      <li class="service-item">
+        <div class="service-icon-box">
+          <img src="./assets/images/icon-reform.svg" alt="reform icon" width="40">
+        </div>
+        <div class="service-content-box">
+          <h4 class="h4 service-item-title">Failed Rehabilitation</h4>
+          <p class="service-item-text">
+            68% recidivism rate proves current system fails at rehabilitation and public safety.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </section>
 
-        .article-title {
-            font-size: 2.5rem;
-            color: #1a1a1a;
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-
-        .about-text {
-            margin-bottom: 3rem;
-        }
-
-        .about-text p {
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .service-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .service-item {
-            background: #fff;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .service-item:hover {
-            transform: translateY(-5px);
-        }
-
-        .service-icon-box {
-            width: 60px;
-            height: 60px;
-            background: #f0f0f0;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1rem;
-        }
-
-        .service-item-title {
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-            color: #1a1a1a;
-        }
-
-        .testimonials {
-            margin-top: 4rem;
-        }
-
-        .testimonials-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .testimonials-item {
-            background: #fff;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .testimonials-item:hover {
-            transform: scale(1.05);
-        }
-
-        .testimonials-avatar-box {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            overflow: hidden;
-            margin-bottom: 1rem;
-        }
-
-        .testimonials-avatar-box img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    </style>
-</head>
-<body>
-    <article class="about active" data-page="about">
-        <header>
-            <h2 class="article-title">Mass Incarceration Crisis</h2>
-        </header>
-
-        <section class="about-text">
+  <section class="testimonials">
+    <h3 class="h3 testimonials-title">Expert Perspectives</h3>
+    <ul class="testimonials-list has-scrollbar">
+      <li class="testimonials-item">
+        <div class="content-card" data-testimonials-item>
+          <figure class="testimonials-avatar-box">
+            <img src="./assets/images/expert-1.jpg" alt="Dr. Michelle Alexander" width="60">
+          </figure>
+          <h4 class="h4 testimonials-item-title">Dr. Michelle Alexander</h4>
+          <div class="testimonials-text">
             <p>
-                The United States leads the world in incarceration rates, with over 2 million people behind bars. This system 
-                disproportionately affects minority communities and perpetuates cycles of poverty and inequality.
+              "Mass incarceration operates as a comprehensive system of racial and social control, with devastating consequences for communities of color. The evidence is clear: this system must be dismantled."
             </p>
+          </div>
+        </div>
+      </li>
+
+      <li class="testimonials-item">
+        <div class="content-card" data-testimonials-item>
+          <figure class="testimonials-avatar-box">
+            <img src="./assets/images/expert-2.jpg" alt="Bryan Stevenson" width="60">
+          </figure>
+          <h4 class="h4 testimonials-item-title">Bryan Stevenson</h4>
+          <div class="testimonials-text">
             <p>
-                Through comprehensive research and data analysis, we demonstrate how mass incarceration has become a critical 
-                social justice issue that demands immediate reform. The evidence clearly shows that current policies are both 
-                ineffective and economically unsustainable.
+              "The opposite of poverty is not wealth. The opposite of poverty is justice. Our criminal justice system perpetuates poverty through mass incarceration."
             </p>
-        </section>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </section>
 
-        <section class="service">
-            <h3 class="service-title">Key Issues</h3>
-            <ul class="service-list">
-                <li class="service-item">
-                    <div class="service-icon-box">
-                        <span class="icon">⚖️</span>
-                    </div>
-                    <div class="service-content-box">
-                        <h4 class="service-item-title">Racial Disparity</h4>
-                        <p class="service-item-text">
-                            African Americans are incarcerated at more than 5 times the rate of whites.
-                        </p>
-                    </div>
-                </li>
+  <section class="clients">
+    <h3 class="h3 clients-title">Supporting Organizations</h3>
+    <ul class="clients-list has-scrollbar">
+      <li class="clients-item">
+        <a href="#">
+          <img src="./assets/images/org-1.png" alt="ACLU logo">
+        </a>
+      </li>
+      <li class="clients-item">
+        <a href="#">
+          <img src="./assets/images/org-2.png" alt="Equal Justice Initiative logo">
+        </a>
+      </li>
+      <li class="clients-item">
+        <a href="#">
+          <img src="./assets/images/org-3.png" alt="The Sentencing Project logo">
+        </a>
+      </li>
+    </ul>
+  </section>
+</article>
 
-                <li class="service-item">
-                    <div class="service-icon-box">
-                        <span class="icon">💰</span>
-                    </div>
-                    <div class="service-content-box">
-                        <h4 class="service-item-title">Economic Impact</h4>
-                        <p class="service-item-text">
-                            Over $80 billion spent annually on incarceration, draining public resources.
-                        </p>
-                    </div>
-                </li>
-
-                <li class="service-item">
-                    <div class="service-icon-box">
-                        <span class="icon">👨‍👩‍👧‍👦</span>
-                    </div>
-                    <div class="service-content-box">
-                        <h4 class="service-item-title">Family Disruption</h4>
-                        <p class="service-item-text">
-                            2.7 million children have a parent in prison, affecting generational outcomes.
-                        </p>
-                    </div>
-                </li>
-
-                <li class="service-item">
-                    <div class="service-icon-box">
-                        <span class="icon">🔄</span>
-                    </div>
-                    <div class="service-content-box">
-                        <h4 class="service-item-title">Reform Solutions</h4>
-                        <p class="service-item-text">
-                            Evidence-based alternatives to incarceration show better outcomes at lower costs.
-                        </p>
-                    </div>
-                </li>
-            </ul>
-        </section>
-
-        <section class="testimonials">
-            <h3 class="testimonials-title">Expert Voices</h3>
-            <ul class="testimonials-list">
-                <li class="testimonials-item">
-                    <div class="content-card">
-                        <figure class="testimonials-avatar-box">
-                            <img src="https://via.placeholder.com/80" alt="Expert">
-                        </figure>
-                        <h4 class="testimonials-item-title">Dr. Michelle Alexander</h4>
-                        <div class="testimonials-text">
-                            <p>
-                                "Mass incarceration operates as a tightly networked system of laws, policies, customs, and institutions 
-                                that operate collectively to ensure the subordinate status of a group defined largely by race."
-                            </p>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </section>
-    </article>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const observerOptions = {
-                threshold: 0.1
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, observerOptions);
-
-            document.querySelectorAll('.service-item, .testimonials-item').forEach(item => {
-                observer.observe(item);
-            });
-        });
-    </script>
-</body>
-</html>
 
 
 
